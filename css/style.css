@@ -25,3 +25,8 @@ h3{
 .form-group{
     padding: 0px 250px 0px 250px ;
 }
+button{
+    background-color: rgb(31, 31, 194);
+    color: white;
+    border-radius: 15px;
+}
