@@ -3,8 +3,14 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.container{
+/* .container{
     background-color: aquamarine;
     /* margin: 20px 50px 0px 50px; */
-    height: 100%;
+    /* height: 100%;
+} */ 
+.welcome{
+    text-align: center;
+}
+.cards{
+     padding-left: 350px;
 }
