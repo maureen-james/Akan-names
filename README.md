@@ -38,15 +38,8 @@ Submit. Input example, the program compares the inputs with the conditions set f
 0 < Month >= 12
 Gender Male or Female.
 
-True value is output. Output example: You were born on Sunday and Your akan name is Kwasi! &nbsp If your gender is Male.
-True value is output. Output example: You were born on Sunday and Your akan name is Akosua! &nbsp If your gender is female.
-Example
-
-century input -- 20
-year input -- 19
-month input -- 7
-date input -- 14
-gender -- male selected, Expected output is You were born on Sunday and Your akan name is Kwasi!
+True value is output. Output example:Your akan name is Yaa If your gender is Male and youre born on Thursday.
+True value is output. Output example:Your akan name is Yaw If your gender is female and youre born on Thursday.
 ##### Known Bugs
 Some output are not as accurate as expected..
 # Installation

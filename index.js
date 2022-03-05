@@ -37,3 +37,18 @@ function compareNames(birthyear, birthmonth, birthday, gender){
           return femaleNames[date.getDay()]
         }
      };
+    //  function validateForms(
+    //     let x = document.getElementById("birthyear").value;
+    //     // If x is Not a Number or less than one or greater than 10
+    //     let text;
+    //     if (isNaN(x) || x < 1 || x > 10) {
+    //       alert = "Input not valid";
+    //     } else {
+    //       text = "Input OK";
+    //     }
+    //  )
+    function validate() {
+        let birthYear = document.getElementById("birthyear");
+        if( document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >2100 || document.myForm.year.value <=1900) {
+           alert( "Please provide a valid year of birth! eg 2019" );
+        }}
