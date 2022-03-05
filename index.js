@@ -1,38 +1,31 @@
-var CC, YY, MM, DD, d, dayValue;
-var dayNames =["Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday" ];
-var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
-var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
+let form = document.getElementById("form");
+let birthYear = document.getElementById("birthyear");
+let birthMonth = document.getElementById("birthmonth");
+let birthDay = document.getElementById("birthday");
 
-function validate() {
- var year = document.getElementById ("birthyear");
- if(document.myForm.year.value == "" || document.myForm.year.value.length !=4 
- || document.myForm.year.value >2100 || document.myForm.year.value<=1900)
- {
-    alert( "Please provide a valid year of birth! eg 2019" );
-    document.myForm.year.focus() ;
-    return false;
- }
+let displayAkan = document.querySelector (".akanname")
+ 
+form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+    let userGender = form.gender.value;
 
+    var akanName = compareNames(birthYear.value, birthMonth.value, birthDay.value, userGender)
 
- else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) || 
-  document.myForm.month.value.length != 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 0){
-     alert( "Please provide your month of birth! between 1 and 12" );
-     document.myForm.month.focus() ;
-     return false;
-}
+    displayAkan.innerHTML = `Your Akan Name is: ${akanName}`;
 
-else if( document.myForm.date.value == "" || isNaN( document.myForm.month.value ) || 
-document.myForm.month.value.length != 2 || document.myForm.date.value > 31 || document.myForm.date.value <= 0){
-   alert( "Please provide your date of birth! between 1 and 12" );
-   document.myForm.month.focus() ;
-   return false;
-}
-else if(genders[0].checked==false && genders[1].checked==false ) {
-    alert("You must select male or female");
-    return false;
-}
-else{
-    return true;
-}
-
-}
+    
+});
+function compareNames(birthyear, birthmonth, birthday, gender){
+    var dayNames =["Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday","Saturday" ];
+    var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+    var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
+     if(gender ==="male"){
+         var date = new Date (parseInt(birthyear), parseInt(birthmonth), parseInt(birthday))
+         var dayOfWeek = dayNames[date.getDay()];
+         return maleNames[date.getDay()]
+        }else{
+            var date = new Date(parseInt(birthyear), parseInt(birthmonth), parseInt(birthday))
+            var dayOfWeek = dayNames[date.getDay()];
+          return femaleNames[date.getDay()]
+        }
+     };
