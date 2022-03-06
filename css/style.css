@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 .container{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/CapeTown.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./images/CapeTown.jpg);
+    background-color: darkgreen;
     /* margin: 20px 50px 0px 50px;
     /* height: 100%; */
     /* color: white; */
